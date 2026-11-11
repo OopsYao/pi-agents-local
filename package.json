@@ -1,0 +1,33 @@
+{
+  "name": "pi-agents-local",
+  "version": "0.1.0",
+  "description": "Load cwd-local AGENTS.local.md instructions through pi's native context files.",
+  "type": "module",
+  "keywords": [
+    "pi-package"
+  ],
+  "files": [
+    "index.ts"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "node --import tsx --test tests/*.test.ts"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "1.4.0",
+    "@types/node": "^22.19.0",
+    "tsx": "^4.20.0",
+    "typescript": "~5.9.3"
+  }
+}
